@@ -2,18 +2,28 @@ package trabajo_practico_3_p2;
 
 public class Producto {
 
-	private double peso, precioFabricacion;
+	private double peso, precioFabricacion, porcParaVender;
 	private String nombre, tipoMadera, color;
-	
+
 	public Producto(String nombre, double peso, double precioFabricacion, String tipoMadera, String color) {
 		this.nombre = nombre;
 		this.peso = peso;
 		this.precioFabricacion = precioFabricacion;
+		this.porcParaVender = 35;
 		this.tipoMadera = tipoMadera;
 		this.color = color;
 	}
 
-	
+	public Producto(String nombre, double peso, double precioFabricacion, double porc, String tipoMadera,
+			String color) {
+		this.nombre = nombre;
+		this.peso = peso;
+		this.precioFabricacion = precioFabricacion;
+		this.porcParaVender = porc;
+		this.tipoMadera = tipoMadera;
+		this.color = color;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -32,6 +42,15 @@ public class Producto {
 
 	public void setPrecioFabricacion(double precioFabricacion) {
 		this.precioFabricacion = precioFabricacion;
+	}
+
+	public double getPorcParaVender() {
+		return porcParaVender;
+	}
+
+	public double getPrecioVenta() {
+
+		return (this.getPrecioFabricacion() + (this.getPrecioFabricacion() * this.porcParaVender) / 100);
 	}
 
 	public String getTipoMadera() {
@@ -54,7 +73,5 @@ public class Producto {
 	public String toString() {
 		return "Producto [Nombe=" + nombre + "]";
 	}
-	
-	
-	
+
 }

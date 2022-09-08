@@ -7,7 +7,7 @@ public class Main_fabrica {
 		Producto silla = new Producto("Silla", 5, 100, "Algarrobo", "Marron");
 		Producto mesa = new Producto("Mesa", 10, 1000, "Pino", "Negro");
 		Producto banco = new Producto("Banco", 7, 500, "Pino", "Marron");
-		Producto cajonera = new Producto("Cajonera", 12, 2000, "Algarrobo", "Gris");
+		Producto cajonera = new Producto("Cajonera", 12, 2000, 10, "Algarrobo", "Gris");
 		
 		Fabrica fabrica1 = new Fabrica("Fabrica 1");
 
@@ -26,12 +26,10 @@ public class Main_fabrica {
 		fabrica1.agregarProductoAstock(banco);
 		fabrica1.agregarProductoAstock(banco);
 		
-		//fabrica1.setPorcParaVenderAproducto(cajonera, 10);
 		
-		System.out.println("Precio silla para la venta: " + fabrica1.getPrecioVenta(silla));
+		System.out.println("Precio silla para la venta: " + silla.getPrecioVenta());
 		
-		System.out.println((cajonera.getPrecioFabricacion()+(cajonera.getPrecioFabricacion())/100));
-		System.out.println("Precio cajonera para la venta: " + fabrica1.getPrecioVenta(cajonera));
+		System.out.println("Precio cajonera para la venta: " + cajonera.getPrecioVenta());
 		
 	}
 

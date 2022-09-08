@@ -27,6 +27,8 @@ public class Main_celular {
 		System.out.println(celular.getContactos_mismoNroTelefono().size());
 		
 		System.out.println("Promedio de edad: " + celular.getPromedioEdad());
+		
+		System.out.println("Contactos: " + celular.getContactos());
 	}
 
 }

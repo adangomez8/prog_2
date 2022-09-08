@@ -62,18 +62,16 @@ public class Main_peluqueria {
 		peluqueria1.agregarTurno(turno4);
 		peluqueria1.agregarTurno(turno5);
 		
-		//NO FUNCIONA
 		System.out.println(peluqueria1.getTurnos());
-		peluqueria1.ordenarTurnos();
 		
 		System.out.println(peluqueria1.getTurnos());
 
-		//NO FUNCIONA
 		peluqueria1.asignarTurno(turno1);
 		peluqueria1.asignarTurno(turno2);
 		peluqueria1.asignarTurno(turno3);
 		peluqueria1.asignarTurno(turno4);
 		peluqueria1.asignarTurno(turno5);
+	
 	}
 	
 	
